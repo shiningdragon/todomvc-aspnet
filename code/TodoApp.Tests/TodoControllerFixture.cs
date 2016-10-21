@@ -21,7 +21,7 @@
             var applicationUserManager = this.GetApplicationUserManagerMock();
             var applicationDbContext = this.GetApplicationDbContextMock();
 
-            var todoController = new TodoController(applicationUserManager.Object, applicationDbContext.Object);
+            var todoController =  new TodoController(applicationUserManager.Object, applicationDbContext.Object);
 
             var todo = todoController.GetOne(1).Result as OkNegotiatedContentResult<ToDo>;
 
