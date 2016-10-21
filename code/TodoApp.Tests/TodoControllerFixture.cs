@@ -19,9 +19,9 @@
         public void ShouldGetOne()
         {
             var applicationUserManager = this.GetApplicationUserManagerMock();
-            var applicationDbContextx = this.GetApplicationDbContextMock();
+            var applicationDbContextxx = this.GetApplicationDbContextMock();
 
-            var todoController =  new TodoController(applicationUserManager.Object, applicationDbContextx.Object);
+            var todoController =  new TodoController(applicationUserManager.Object, applicationDbContextxx.Object);
 
             var todo = todoController.GetOne(1).Result as OkNegotiatedContentResult<ToDo>;
 
